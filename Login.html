@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <script>
+    function valid()
+    {
+	    var uname=document.getElementById("Name").value;
+	    var npw=document.getElementById("password").value;
+    	if(uname==null || uname=="")
+	    {
+	    	alert("Invalid Name");
+		    return false;
+	    }
+	    else if(npw.length<6)
+	    {
+		    alert("Password must contain minimum 6 characters");
+		    return false;
+	    }
+	    else
+	    {
+		    return true;
+	    }
+    }
+    </script>
+    <style>
+    body{
+	    background-image : url("https://png.pngtree.com/thumb_back/fh260/background/20210222/pngtree-background-business-light-effect-gray-image_564159.jpg");
+	    background-repeat : no-repeat;
+	    background-size : cover;
+    }
+    .center {
+      margin-left:475px;
+      margin-top:50px;
+      width: 25%;
+      height: 25%;
+      border: 3px solid black;
+      padding: 10px;
+    }
+    *{
+	    text-align:center;
+    }
+    </style>
+    <h1 style="margin-top:150px">LOGIN</h1>
+    <div class="center">
+      <form action="catalogue.html" onsubmit="return valid()">
+        <label>Username :</label><br><input type="text" id="Name" name="name"><br><br>
+        <label>Password:</label><br><input type="text" id="password"><br><br>
+        <input type="submit" style="text-color:black;">
+      </form>
+    </div>
+  </body>
+</html>
