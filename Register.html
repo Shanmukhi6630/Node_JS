@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Register</title>
+</head>
+<body>
+<script>
+function vaild()
+{
+	var name=document.getElementById("Name").value;
+	var email=document.getElementById("mail").value;
+	var gend=document.getElementsByName("gender").value;
+	var phone=document.getElementById("number").value;
+	var birth=document.getElementById("dob").value;
+	var pw=document.getElementById("password").value;
+	var cpw=document.getElementById("cpassword").value;
+	if(name==null || name=="")
+	{
+		alert("Invalid Name");
+		return false;
+	}
+	else if(email==null || email=="")
+	{
+		alert("Invalid Mail ID");
+		return false;
+	}
+	else if(gend==null)
+	{
+		alert("Invalid Gender");
+		return false;
+	}
+	else if(phone==null||phone=="")
+	{
+		alert("Invalid Number");
+		return false;
+	}
+	else if(birth==null||birth=="")
+	{
+		alert("Invalid Date of Birth");
+		return false;
+	}
+	else if(pw.length<6)
+	{
+		alert("Password must contain minimum 6 characters");
+		return false;
+	}
+	else if(cpw!==pw)
+	{
+		alert("Incorrect Password");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+</script>
+<style>
+body
+{
+	background-image : url("https://png.pngtree.com/thumb_back/fh260/background/20230415/pngtree-website-technology-line-dark-background-image_2344719.jpg");
+	background-repeat : no-repeat;
+	background-size : cover;
+.center {
+  margin-left:475px;
+  margin-top:90px;
+  width: 25%;
+  height: 80%;
+  border: 3px solid #40B5AD;
+  padding: 10px;
+}
+*{
+	text-align:center;
+	color:turquoise;
+}
+</style>
+<div class="center">
+<form action="login.html" onsubmit="return vaild()">
+<h1>JOIN NOW</h1>
+<label style="text-color:white">Username :</label><br><input type="text" id="Name" name="name"><br><br>
+<label>Mail-ID :</label><br><input type="text" id="mail" name="mail"><br><br>
+<label>Gender:</label><br>
+<input type="radio" id="male" name="gender" value="Male"><label>Male</label>&nbsp;&nbsp;
+<input type="radio" id="female" name="gender" value="Female"><label>Female</label>&nbsp;&nbsp;
+<input type="radio" id="female" name="gender" value="Female"><label>Rather not mention</label><br><br>
+<label>Contact No.:</label><br><input type="text" id="number" name="number"><br><br>
+<label>D.O.B:</label><br><input type="text" id="dob"><br><br>
+<label>Address:</label><br><textarea rows="3"></textarea><br><br>
+<label>Password:</label><br><input type="text" id="password"><br><br>
+<label>Confirm Password:</label><br><input type="text" id="cpassword"><br><br>
+<input type="submit" style="text-color:black;">
+</form>
+</div>
+</body>
+</html>
