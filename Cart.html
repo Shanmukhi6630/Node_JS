@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Check Out</title>
+  </head>
+  <body>
+      <style>
+        body{
+        	background-color:#202020;
+        	background-repeat : no-repeat;
+        	background-size : cover;
+        	}
+        .centre {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .container{
+        	display:flex;
+        	align-items:center;
+        	}
+        .container img{
+        	margin-left:10px;
+        	width:100px;
+        	height:100px;
+        	}
+        .container .text{
+        	flex-grow:1;
+        	margin-right:10px;
+        	}
+        .container button{
+        	margin-right:10px;
+        	}
+      </style>
+      <div class="container">
+    	  <img src="https://cdn.vectorstock.com/i/500p/46/63/scary-grunge-smile-face-halloween-sticker-vector-33974663.jpg">
+    	  <div class="text">
+    		<h1 style="text-align:center;color:grey;">***Select Your Order***</h1>
+    	  </div>
+    	  <a href="catalogue.html"><button>Home</button></a>
+    	  <a href="checkout.html"><button>Checkout</button></a>
+    	  <a href="login.html"><button>Log Out</button></a>
+      </div>
+      <form>
+      	<label style="color:white">Book &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label>
+      	<select id="books" name="books">
+      		<option value="None">--Select Book--</option>
+      		<option value="harry">Harry Potter: The Cursed Child</option>
+      		<option value="fourth">Fourth Wing</option>
+      		<option value="court">A Court of Thorns and Roses</option>
+      		<option value="percy">Percy Jackson: Sea of Monsters</option>
+      		<option value="train">How to Train Your Dragon</option>
+      	</select><br><br>
+    	  <label style="color:white">Quantity :&nbsp;</label>
+      	<input type="text" name="number" id="quantity" value="1">
+      </form>
+  </body>
+</html>
